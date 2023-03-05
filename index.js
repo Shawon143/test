@@ -11,7 +11,8 @@ const port = process.env.PORT || 7000;
 app.use(cors());
 app.use(express.json());
 
-const uri = `mongodb+srv://AsonsServer:shawon646@cluster0.sfpfh.mongodb.net/?retryWrites=true&w=majority`;
+// const uri = `mongodb+srv://AsonsServer:shawon646@cluster0.sfpfh.mongodb.net/?retryWrites=true&w=majority`;
+const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
